@@ -37,8 +37,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
+          git config --global user.email "khadijaaws21@gmail.com"
+          git config --global user.name "khadija-AC"
           git add .
           git commit -m "Commit message from GitHub Actions"
           git push https://x-access-token:${GH_TOKEN}@github.com/khadija-AC/p.git main
