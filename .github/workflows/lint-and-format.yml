@@ -31,15 +31,11 @@ jobs:
          chmod +x .husky/pre-commit
         
 
-      - name: add
-        run: git add .
-
-      - name: commit
-        run: git commit -m "first"
+      
      
       - name: Push changes
         env:
-          MANAGER_IP: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config --global user.email "you@example.com"
           git config --global user.name "Your Name"
