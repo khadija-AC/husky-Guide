@@ -27,5 +27,11 @@ jobs:
       - name: cat
         run: cat index.js
 
+      - name: Comment on PR if lint fails
+        if: ${{ failure() }}
+        run: |
+          echo "Lint checks failed. Please review and fix the issues."
+          exit 1
+
       - name: Run Prettier
         run: npx prettier --write .
