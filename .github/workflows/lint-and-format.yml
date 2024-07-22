@@ -41,7 +41,7 @@ jobs:
           git config --global user.name "khadija-AC"
           git add .
           git commit -m "Commit message from GitHub Actions"
-          git push https://x-access-token:${GH_TOKEN}@github.com/khadija-AC/p.git main
+          git push https://${GH_TOKEN}@github.com/khadija-AC/p.git main
 
       - name: cat
         run: cat index.js
