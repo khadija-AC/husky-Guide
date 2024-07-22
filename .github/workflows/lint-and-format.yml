@@ -26,6 +26,12 @@ jobs:
           git config --global user.email "khadijaaws21@gmail.com"
           git config --global user.name "khadija-AC"
 
+      - name: Permission
+        run: |
+         chmod +x .husky/pre-commit
+         chmod +x .husky/prepare-commit-msg
+         chmod +x .husky/commit-msg 
+
       - name: add
         run: git add .
 
