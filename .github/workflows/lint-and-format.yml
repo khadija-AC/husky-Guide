@@ -21,5 +21,11 @@ jobs:
       - name: Run ESLint
         run: npx eslint .
 
+      - name: ls
+        run: ls -a
+
+      - name: cat
+        run: cat index.js
+
       - name: Run Prettier
         run: npx prettier --write .
