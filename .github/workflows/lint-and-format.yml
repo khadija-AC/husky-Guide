@@ -37,8 +37,15 @@ jobs:
       - name: commit
         run: git commit -m "first"
      
-      - name: push
-        run: git push origin main
+      - name: Push changes
+        env:
+          MANAGER_IP: ${{ secrets.GH_TOKEN }}
+        run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+          git add .
+          git commit -m "Commit message from GitHub Actions"
+          git push https://x-access-token:${GH_TOKEN}@github.com/khadija-AC/p.git main
 
       - name: cat
         run: cat index.js
