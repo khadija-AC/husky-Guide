@@ -37,8 +37,7 @@ jobs:
       - name: commit
         run: git commit -m "first"
      
-      - name: push
-        run: git push origin main
+      
 
       - name: cat
         run: cat index.js
