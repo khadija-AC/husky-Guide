@@ -29,8 +29,7 @@ jobs:
       - name: Permission
         run: |
          chmod +x .husky/pre-commit
-         chmod +x .husky/prepare-commit-msg
-         chmod +x .husky/commit-msg 
+        
 
       - name: add
         run: git add .
